@@ -5,6 +5,7 @@
 
 import smbus
 from time import sleep
+import urllib.request
 
 I2C_PORT = 7
 bus = smbus.SMBus(I2C_PORT)
@@ -32,6 +33,13 @@ RANGE_16G           = 0x03
 
 MEASURE             = 0x08
 AXES_DATA           = 0x32
+
+def send_to_thingspeak(field, value):
+    baseURL = 'https://api.thingspeak.com/update?api_key=XRHC5RYTF1308YU7&field'+ str(field) + '='
+    f = urllib.request.urlopen(baseURL + str(value))
+    f.read()
+    f.close()
+
 
 class ADXL345:
 
@@ -99,10 +107,13 @@ if __name__ == "__main__":
     # the current readings
     adxl345 = ADXL345()
     
-    axes = adxl345.getAxes(True)
-    print "ADXL345 on address 0x%x:" % (adxl345.address)
     while True:
+        axes = adxl345.getAxes(True)
         print("=======================")
         print("x-axis = %.3fG" % ( axes['x'] ))
         print("y-axis = %.3fG" % ( axes['y'] ))
         print("z-axis = %.3fG" % ( axes['z'] )) 
+        send_to_thingspeak(3, axes['x'])
+        send_to_thingspeak(4, axes['y'])
+        send_to_thingspeak(5, axes['z'])
+        sleep(1)
