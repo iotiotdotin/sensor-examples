@@ -9,5 +9,5 @@ while True:
     bus.write_byte(PCF8591_ADDR, A0)
     value = bus.read_byte(PCF8591_ADDR)
     print("=======================")
-    print("AQI: %f PPM" % value)
+    print("Alcohol range: %f PPM" % value)
     time.sleep(1)
