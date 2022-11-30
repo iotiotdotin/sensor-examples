@@ -1,22 +1,19 @@
-# Sensor Examples 
+## Description
 
-## What is this?
-Simple IoT sensor examples running on BrainyPi. 
+Get X,Y,Z acceleration from ADXL345 sensor.
+
 
 ## Usage 
 
-1.  Install the dependencies on BrainyPi, run command
-    ```sh
-    sudo apt-get install python3-dev python3-pip python3-smbus i2c-tools -y
-    sudo pip3 install RPi.bme280
-    ```
 1.  Clone the repository
     ```sh
     git clone https://github.com/iotiotdotin/sensor-examples.git
+    cd sensor-examples/sensor-code/led_blink
     ```
 1.  Connect the sensors according to the connection diagrams given.
-1.  Run the codes
+    ![Diagram](./connection_diagram.jpg)
+    
+1.  Run the code
     ```sh
-    cd sensor-examples
-    sudo python3 ./led_blink.py
+    sudo python3 ./accelerometer.py
     ```
