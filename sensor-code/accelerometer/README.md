@@ -8,7 +8,7 @@ Get X,Y,Z acceleration from ADXL345 sensor.
 1.  Clone the repository
     ```sh
     git clone https://github.com/iotiotdotin/sensor-examples.git
-    cd sensor-examples/sensor-code/led_blink
+    cd sensor-examples/sensor-code/accelerometer
     ```
 1.  Connect the sensors according to the connection diagrams given.
     ![Diagram](./connection_diagram.jpg)
