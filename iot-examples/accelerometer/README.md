@@ -7,7 +7,7 @@ Get X,Y,Z acceleration from ADXL345 sensor and send to thingspeak cloud.
 1.  Clone the repository
     ```sh
     git clone https://github.com/iotiotdotin/sensor-examples.git
-    cd sensor-examples/sensor-code/accelerometer
+    cd sensor-examples/iot-examples/accelerometer
     ```
 1.  Connect the sensor according to the connection diagram given.
     ![Diagram](./connection_diagram.jpg)
