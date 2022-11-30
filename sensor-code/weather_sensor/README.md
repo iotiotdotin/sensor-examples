@@ -14,12 +14,12 @@ Read temperature and pressure values from BME280/BMP280 sensor.
 1.  Clone the repository
     ```sh
     git clone https://github.com/iotiotdotin/sensor-examples.git
-    cd sensor-examples/sensor-code/led_blink
+    cd sensor-examples/sensor-code/weather_sensor
     ```
 1.  Connect the sensors according to the connection diagrams given.
     ![Diagram](./connection_diagram.png)
     
 1.  Run the code
     ```sh
-    sudo python3 ./accelerometer.py
+    sudo python3 ./weather_sensor.py
     ```
