@@ -1,7 +1,5 @@
-# Sensor Examples 
-
-## What is this?
-Simple IoT sensor examples running on BrainyPi. 
+## Description
+Simple code to blink LED 50 times
 
 ## Usage 
 
